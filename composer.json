@@ -1,0 +1,10 @@
+{
+    "name": "knplabs/php-cs-fixer-docker",
+    "description": "Docker image to run FriendsOfPHP/PHP-CS-Fixer with some plugins",
+    "type": "package",
+    "license": "MIT",
+    "require": {
+        "friendsofphp/php-cs-fixer": "^2.15",
+        "pedrotroller/php-cs-custom-fixer": "^2.15"
+    }
+}
