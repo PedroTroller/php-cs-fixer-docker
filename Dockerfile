@@ -1,6 +1,6 @@
 FROM composer:1.8.0 AS composer
 
-FROM php:7.3.0-cli
+FROM php:7.3.6-cli
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends \
