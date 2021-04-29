@@ -1,0 +1,48 @@
+version: 2
+updates:
+- package-ecosystem: composer
+  directory: "/."
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - PedroTroller
+  ignore:
+  - dependency-name: pedrotroller/php-cs-custom-fixer
+    versions:
+    - 2.23.1
+    - 2.23.2
+    - 2.24.0
+  - dependency-name: friendsofphp/php-cs-fixer
+    versions:
+    - 2.18.2
+    - 2.18.3
+    - 2.18.4
+    - 2.18.5
+  commit-message:
+    prefix: fix
+    include: scope
+- package-ecosystem: docker
+  directory: "/."
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  reviewers:
+  - PedroTroller
+  ignore:
+  - dependency-name: composer
+    versions:
+    - "2.0"
+    - 2.0.10
+    - 2.0.11
+    - 2.0.12
+    - 2.0.9
+  - dependency-name: php
+    versions:
+    - 8.0.1.pre.cli
+    - 8.0.2.pre.cli
+  commit-message:
+    prefix: fix
+    include: scope
