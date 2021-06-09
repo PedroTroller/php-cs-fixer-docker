@@ -1,4 +1,4 @@
-FROM composer:1.8.6 AS composer
+FROM composer:2.1.2 AS composer
 
 FROM php:7.3.6-cli
 
